@@ -128,21 +128,25 @@
                 <p.MethodDeclaration>
                     <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
                         <Parameter Id="L0" Desc="y" />
+                        <Parameter Id="L1" Desc="ka" />
                         <Parameter Id="R0" Desc="modulé" />
                     </MethodDeclaration>
                 </p.MethodDeclaration>
                 <Terminal DataType="Wfm(Double)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Double" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
                 <Terminal DataType="Wfm(Double)" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
             </MethodCall>
             <MethodCall Bounds="1630 575 50 50" Id="135" Target="Démodulateur_Cohérent\.gvi">
                 <p.MethodDeclaration>
                     <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
                         <Parameter Id="L0" Desc="y" />
+                        <Parameter Id="L1" Desc="ka" />
                         <Parameter Id="R0" Desc="démodulé" />
                         <Parameter Id="R1" Desc="démodulé (downconverted)" />
                     </MethodDeclaration>
                 </p.MethodDeclaration>
                 <Terminal DataType="Wfm(Double)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Double" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
                 <Terminal DataType="Wfm(Double)" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                 <Terminal DataType="@1785820191_0" Direction="Output" Hotspot="50 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
             </MethodCall>
@@ -150,14 +154,13 @@
                 <Terminal DataType="@1785820191_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
             <TextNode AttachedTo="111" Bounds="1790 600 147 16" Id="121" Text="démodulé (downconverted)" xmlns="http://www.ni.com/PlatformFramework" />
-            <DataAccessor Bounds="1745 575 40 15" DataItem="122" Id="123" Label="133">
+            <DataAccessor Bounds="1710 535 40 15" DataItem="122" Id="123" Label="133">
                 <Terminal DataType="Wfm(Double)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
-            <TextNode AttachedTo="123" Bounds="1790 575 54 16" Id="133" Text="démodulé" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="138" Joints="N(135:R0) N(123:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="123" Bounds="1755 535 54 16" Id="133" Text="démodulé" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="139" Joints="N(135:R1) h(52) v(15) N(111:Value)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="140" Joints="N(74:output waveform) h(40) B(1) N(78:Value) B(1) v(245) B(3) N(91:L0) B(3) v(75) N(134:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="141" Joints="N(134:R0) h(35) B(1) N(135:L0) B(1) v(70) N(167:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="140" Joints="N(74:output waveform) h(40) B(1) N(78:Value) B(1) v(185) B(3) h(435) B(4) N(171:L0) B(4) v(125) h(173) B(7) N(212:L0) B(7) v(80) N(251:L0) B(3) v(60) B(11) N(91:L0) B(11) v(75) N(134:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="141" Joints="N(134:R0) h(35) B(1) N(135:L0) B(1) v(-45) h(300) v(-80) N(171:L1) B(1) v(70) N(167:L0)" xmlns="http://www.ni.com/PlatformFramework" />
             <MethodCall Bounds="1630 645 50 50" Id="167" Target="Détecteur\ de\ crête\.gvi">
                 <p.MethodDeclaration>
                     <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
@@ -181,86 +184,177 @@
                 <Terminal DataType="Wfm(Double)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
             <TextNode AttachedTo="156" Bounds="1800 665 40 16" Id="166" Text="Filtered" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="170" Joints="N(167:R1) h(5) v(10) N(156:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="170" Joints="N(167:R1) h(5) v(10) h(40) B(3) N(156:Value) B(3) v(15) h(310) v(-25) N(251:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <MethodCall Bounds="1910 440 50 50" Id="171" Target="XY\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="X" />
+                        <Parameter Id="L1" Desc="Y" />
+                        <Parameter Id="R0" Desc="created cluster" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="Wfm(Double)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Wfm(Double)" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="@-827244755_0" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <DataAccessor Bounds="2060 480 40 15" DataItem="194" Id="195" Label="205">
+                <Terminal DataType="@-827244755_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="195" Bounds="2105 480 121 16" Id="205" Text="X_modulant_Y_modulé" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="207" Joints="N(171:R0) h(55) v(40) N(195:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Literal Bounds="205 585 40.8 15.2" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="208" Label="209" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0x3FE6666666666666</p.Data>
+                <NumericBehavior Interpretation="Numeric" ValueFormatter="LV:G6" />
+            </Literal>
+            <TextNode AttachedTo="208" Bounds="187 585 13 16" Id="209" Text="ka" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="210" Joints="N(208:Out) h(64.2) B(1) N(134:L1) B(1) v(40) h(1315) v(-40) N(135:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <MethodCall Bounds="2060 565 50 50" Id="212" Target="XY\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="X" />
+                        <Parameter Id="L1" Desc="Y" />
+                        <Parameter Id="R0" Desc="created cluster" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="Wfm(Double)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Wfm(Double)" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="@-827244755_0" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <Wire Id="214" Joints="N(135:R0) h(25) B(1) N(212:L1) B(1) v(-40) N(123:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="236" Joints="N(212:R0) h(5) v(-5) N(239:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="2175 560 40 15" DataItem="238" Id="239" Label="249">
+                <Terminal DataType="@-827244755_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="239" Bounds="2220 560 154 16" Id="249" Text="X_modumant_Y_démodulé_C" xmlns="http://www.ni.com/PlatformFramework" />
+            <MethodCall Bounds="2040 645 50 50" Id="251" Target="XY\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="X" />
+                        <Parameter Id="L1" Desc="Y" />
+                        <Parameter Id="R0" Desc="created cluster" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="Wfm(Double)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Wfm(Double)" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="@-827244755_0" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <DataAccessor Bounds="2150 650 40 15" DataItem="254" Id="255" Label="265">
+                <Terminal DataType="@-827244755_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="255" Bounds="2195 650 134 16" Id="265" Text="X_modulant_Y_démodulé" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="266" Joints="N(251:R0) h(55) v(5) N(255:Value)" xmlns="http://www.ni.com/PlatformFramework" />
         </BlockDiagram>
-        <CPFrontPanel Height="[float]1839" Id="15" Width="[float]2000">
-            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=44}" Height="[float]372" Id="46" Label="[UIModel]54" Left="[float]166" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" ThemeColorPaletteName="[string]Flat Purple" Top="[float]33" Width="[float]498" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+        <CPFrontPanel Height="[float]1600" Id="15" Width="[float]2000">
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=44}" Height="[float]192" Id="46" Label="[UIModel]54" Left="[float]10" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" ThemeColorPaletteName="[string]Flat Purple" Top="[float]42" Width="[float]316" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="47" Label="[string]Time" MajorDivisions="[UIModel]50" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 4000, System.Double" ValueType="[Type]Double">
                     <RangeLabeledDivisions Id="50" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                 </Axis>
                 <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="48" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 1.9999999999999998E-05, System.Double" ValueType="[Type]Double" />
                 <Plot HorizontalScale="[UIModel]47" Id="49" Label="[string]Plot" VerticalScale="[UIModel]48" />
             </Graph>
-            <PlotLegend Graph="[UIModel]46" Height="[float]28" Id="51" Left="[float]671" ThemeColorPaletteName="[string]Flat Purple" Top="[float]33" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]46" Height="[float]102" Id="52" Left="[float]171" ThemeColorPaletteName="[string]Flat Purple" Top="[float]434" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <GraphTools Graph="[UIModel]46" Id="53" Left="[float]171" ThemeColorPaletteName="[string]Flat Purple" Top="[float]412" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <Label Id="54" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]46" Left="[float]166" Locked="[bool]True" Text="[string]Graph" ThemeColorPaletteName="[string]Flat Purple" Top="[float]10" />
-            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=77}" Height="[float]400" Id="79" Label="[UIModel]87" Left="[float]919" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]33" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <PlotLegend Graph="[UIModel]46" Height="[float]28" Id="51" Left="[float]333" ThemeColorPaletteName="[string]Flat Purple" Top="[float]42" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]46" Height="[float]102" Id="52" Left="[float]15" ThemeColorPaletteName="[string]Flat Purple" Top="[float]263" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]46" Id="53" Left="[float]15" ThemeColorPaletteName="[string]Flat Purple" Top="[float]241" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="54" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]46" Left="[float]10" Locked="[bool]True" Text="[string]Graph" ThemeColorPaletteName="[string]Flat Purple" Top="[float]19" />
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=77}" Height="[float]190" Id="79" Label="[UIModel]87" Left="[float]424" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]43" Width="[float]360" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="80" Label="[string]Time" MajorDivisions="[UIModel]83" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 1.9999999999999998E-05, System.Double" ValueType="[Type]Double">
                     <RangeLabeledDivisions Id="83" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                 </Axis>
                 <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="81" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]-1, 1, System.Double" ValueType="[Type]Double" />
                 <Plot HorizontalScale="[UIModel]80" Id="82" Label="[string]Plot" VerticalScale="[UIModel]81" />
             </Graph>
-            <PlotLegend Graph="[UIModel]79" Height="[float]28" Id="84" Left="[float]1526" Top="[float]33" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]79" Height="[float]102" Id="85" Left="[float]924" Top="[float]462" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <GraphTools Graph="[UIModel]79" Id="86" Left="[float]924" Top="[float]440" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <Label Id="87" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]79" Left="[float]919" Locked="[bool]True" Text="[string]Modulant" Top="[float]10" />
-            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=92}" Height="[float]400" Id="94" Label="[UIModel]102" Left="[float]172" PlotAreaMargin="[SMThickness]50,8,17,41" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]444" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <PlotLegend Graph="[UIModel]79" Height="[float]28" Id="84" Left="[float]791" Top="[float]43" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]79" Height="[float]102" Id="85" Left="[float]429" Top="[float]262" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]79" Id="86" Left="[float]429" Top="[float]240" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="87" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]79" Left="[float]424" Locked="[bool]True" Text="[string]Modulant" Top="[float]20" />
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=92}" Height="[float]190" Id="94" Label="[UIModel]102" Left="[float]925" PlotAreaMargin="[SMThickness]50,8,17,41" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]43" Width="[float]336" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="95" Label="[string]Time" MajorDivisions="[UIModel]98" Orientation="[SMOrientation]Horizontal" Range="[IRange]-100000000, 100000000, System.Double" ValueType="[Type]Double">
                     <RangeLabeledDivisions Id="98" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                 </Axis>
                 <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="96" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 2000, System.Double" ValueType="[Type]Double" />
                 <Plot HorizontalScale="[UIModel]95" Id="97" Label="[string]Plot" VerticalScale="[UIModel]96" />
             </Graph>
-            <PlotLegend Graph="[UIModel]94" Height="[float]28" Id="99" Left="[float]779" Top="[float]444" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]94" Height="[float]102" Id="100" Left="[float]177" Top="[float]873" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <GraphTools Graph="[UIModel]94" Id="101" Left="[float]177" Top="[float]851" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <Label Id="102" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]94" Left="[float]172" Locked="[bool]True" Text="[string]abs(FFT)" Top="[float]421" />
-            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=110}" Height="[float]400" Id="112" Label="[UIModel]120" Left="[float]166" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]867" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <PlotLegend Graph="[UIModel]94" Height="[float]28" Id="99" Left="[float]1268" Top="[float]43" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]94" Height="[float]102" Id="100" Left="[float]930" Top="[float]262" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]94" Id="101" Left="[float]930" Top="[float]240" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="102" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]94" Left="[float]925" Locked="[bool]True" Text="[string]abs(FFT)" Top="[float]20" />
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=110}" Height="[float]210" Id="112" Label="[UIModel]120" Left="[float]1368" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]33" Width="[float]353" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="113" Label="[string]Time" MajorDivisions="[UIModel]116" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 1.9999999999999998E-05, System.Double" ValueType="[Type]Double">
                     <RangeLabeledDivisions Id="116" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                 </Axis>
                 <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="114" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]-0.1, 1.8, System.Double" ValueType="[Type]Double" />
                 <Plot HorizontalScale="[UIModel]113" Id="115" Label="[string]Plot" VerticalScale="[UIModel]114" />
             </Graph>
-            <PlotLegend Graph="[UIModel]112" Height="[float]28" Id="117" Left="[float]773" Top="[float]867" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]112" Height="[float]102" Id="118" Left="[float]171" Top="[float]1296" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <GraphTools Graph="[UIModel]112" Id="119" Left="[float]171" Top="[float]1274" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <Label Id="120" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]112" Left="[float]166" Locked="[bool]True" Text="[string]démodulé (downconverted)" Top="[float]844" />
-            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=122}" Height="[float]400" Id="124" Label="[UIModel]132" Left="[float]919" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]867" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <PlotLegend Graph="[UIModel]112" Height="[float]28" Id="117" Left="[float]1728" Top="[float]33" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]112" Height="[float]102" Id="118" Left="[float]1373" Top="[float]272" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]112" Id="119" Left="[float]1373" Top="[float]250" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="120" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]112" Left="[float]1368" Locked="[bool]True" Text="[string]démodulé (downconverted)" Top="[float]10" />
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=122}" Height="[float]235" Id="124" Label="[UIModel]132" Left="[float]10" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]270" Width="[float]362" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="125" Label="[string]Time" MajorDivisions="[UIModel]128" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 1.9999999999999998E-05, System.Double" ValueType="[Type]Double">
                     <RangeLabeledDivisions Id="128" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                 </Axis>
                 <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="126" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]-1.5, 1, System.Double" ValueType="[Type]Double" />
                 <Plot HorizontalScale="[UIModel]125" Id="127" Label="[string]Plot" VerticalScale="[UIModel]126" />
             </Graph>
-            <PlotLegend Graph="[UIModel]124" Height="[float]28" Id="129" Left="[float]1526" Top="[float]867" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]124" Height="[float]102" Id="130" Left="[float]924" Top="[float]1296" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <GraphTools Graph="[UIModel]124" Id="131" Left="[float]924" Top="[float]1274" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <Label Id="132" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]124" Left="[float]919" Locked="[bool]True" Text="[string]démodulé" Top="[float]844" />
-            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=143}" Height="[float]400" Id="145" Label="[UIModel]153" Left="[float]166" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]1298" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <PlotLegend Graph="[UIModel]124" Height="[float]28" Id="129" Left="[float]379" Top="[float]270" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]124" Height="[float]102" Id="130" Left="[float]15" Top="[float]534" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]124" Id="131" Left="[float]15" Top="[float]512" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="132" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]124" Left="[float]10" Locked="[bool]True" Text="[string]démodulé" Top="[float]247" />
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=143}" Height="[float]233" Id="145" Label="[UIModel]153" Left="[float]482" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]271" Width="[float]286" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="146" Label="[string]Time" MajorDivisions="[UIModel]149" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 1.9999999999999998E-05, System.Double" ValueType="[Type]Double">
                     <RangeLabeledDivisions Id="149" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                 </Axis>
                 <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="147" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 1.7000000000000002, System.Double" ValueType="[Type]Double" />
                 <Plot HorizontalScale="[UIModel]146" Id="148" Label="[string]Plot" VerticalScale="[UIModel]147" />
             </Graph>
-            <PlotLegend Graph="[UIModel]145" Height="[float]28" Id="150" Left="[float]773" Top="[float]1298" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]145" Height="[float]102" Id="151" Left="[float]171" Top="[float]1727" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <GraphTools Graph="[UIModel]145" Id="152" Left="[float]171" Top="[float]1705" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <Label Id="153" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]145" Left="[float]166" Locked="[bool]True" Text="[string]Abs" Top="[float]1275" />
-            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=155}" Height="[float]400" Id="157" Label="[UIModel]165" Left="[float]919" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]1298" Width="[float]600" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <PlotLegend Graph="[UIModel]145" Height="[float]28" Id="150" Left="[float]775" Top="[float]271" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]145" Height="[float]102" Id="151" Left="[float]487" Top="[float]533" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]145" Id="152" Left="[float]487" Top="[float]511" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="153" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]145" Left="[float]482" Locked="[bool]True" Text="[string]Abs" Top="[float]248" />
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=155}" Height="[float]192" Id="157" Label="[UIModel]165" Left="[float]924" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]292" Width="[float]338" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="158" Label="[string]Time" MajorDivisions="[UIModel]161" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 1.9999999999999998E-05, System.Double" ValueType="[Type]Double">
                     <RangeLabeledDivisions Id="161" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                 </Axis>
                 <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="159" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]-0.1, 1.2000000000000002, System.Double" ValueType="[Type]Double" />
                 <Plot HorizontalScale="[UIModel]158" Id="160" Label="[string]Plot" VerticalScale="[UIModel]159" />
             </Graph>
-            <PlotLegend Graph="[UIModel]157" Height="[float]28" Id="162" Left="[float]1526" Top="[float]1298" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]157" Height="[float]102" Id="163" Left="[float]924" Top="[float]1727" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <GraphTools Graph="[UIModel]157" Id="164" Left="[float]924" Top="[float]1705" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-            <Label Id="165" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]157" Left="[float]919" Locked="[bool]True" Text="[string]Filtered" Top="[float]1275" />
+            <PlotLegend Graph="[UIModel]157" Height="[float]28" Id="162" Left="[float]1269" Top="[float]292" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]157" Height="[float]102" Id="163" Left="[float]929" Top="[float]513" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]157" Id="164" Left="[float]929" Top="[float]491" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="165" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]157" Left="[float]924" Locked="[bool]True" Text="[string]Filtered" Top="[float]269" />
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=194}" Height="[float]218" Id="196" Label="[UIModel]204" Left="[float]1378" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]279" Width="[float]334" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="197" Label="[string]Time" MajorDivisions="[UIModel]200" Orientation="[SMOrientation]Horizontal" Range="[IRange]-1, 1, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="200" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="198" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]-2, 2, System.Double" ValueType="[Type]Double" />
+                <Plot HorizontalScale="[UIModel]197" Id="199" Label="[string]Plot" VerticalScale="[UIModel]198" />
+            </Graph>
+            <PlotLegend Graph="[UIModel]196" Height="[float]28" Id="201" Left="[float]1719" Top="[float]279" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]196" Height="[float]102" Id="202" Left="[float]1383" Top="[float]526" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]196" Id="203" Left="[float]1383" Top="[float]504" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="204" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]196" Left="[float]1378" Locked="[bool]True" Text="[string]X_modulant_Y_modulé" Top="[float]256" />
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=238}" Height="[float]205" Id="240" Label="[UIModel]248" Left="[float]32" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]554" Width="[float]340" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="241" Label="[string]Time" MajorDivisions="[UIModel]244" Orientation="[SMOrientation]Horizontal" Range="[IRange]-1, 1, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="244" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="242" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]-1.5, 1, System.Double" ValueType="[Type]Double" />
+                <Plot HorizontalScale="[UIModel]241" Id="243" Label="[string]Plot" VerticalScale="[UIModel]242" />
+            </Graph>
+            <PlotLegend Graph="[UIModel]240" Height="[float]28" Id="245" Left="[float]379" Top="[float]554" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]240" Height="[float]102" Id="246" Left="[float]37" Top="[float]788" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]240" Id="247" Left="[float]37" Top="[float]766" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="248" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]240" Left="[float]32" Locked="[bool]True" Text="[string]X_modumant_Y_démodulé_C" Top="[float]531" />
+            <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=254}" Height="[float]205" Id="256" Label="[UIModel]264" Left="[float]482" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]554" Width="[float]318" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="257" Label="[string]Time" MajorDivisions="[UIModel]260" Orientation="[SMOrientation]Horizontal" Range="[IRange]-1, 1, System.Double" ValueType="[Type]Double">
+                    <RangeLabeledDivisions Id="260" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
+                </Axis>
+                <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="258" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]-0.1, 1.2000000000000002, System.Double" ValueType="[Type]Double" />
+                <Plot HorizontalScale="[UIModel]257" Id="259" Label="[string]Plot" VerticalScale="[UIModel]258" />
+            </Graph>
+            <PlotLegend Graph="[UIModel]256" Height="[float]28" Id="261" Left="[float]807" Top="[float]554" Visible="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]256" Height="[float]102" Id="262" Left="[float]487" Top="[float]788" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <GraphTools Graph="[UIModel]256" Id="263" Left="[float]487" Top="[float]766" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="264" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]256" Left="[float]482" Locked="[bool]True" Text="[string]X_modulant_Y_démodulé" Top="[float]531" />
         </CPFrontPanel>
         <DataItem AdaptToDiagramType="True" DataType="Double[]" Id="44" Name="Graph">
             <p.DefaultValue>
@@ -345,6 +439,30 @@
                 </Waveform>
             </p.DefaultValue>
         </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="@-827244755_0" Id="194" Name="X_modulant_Y_modulé">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>null</Field1>
+                    <Field2>null</Field2>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="@-827244755_0" Id="238" Name="X_modumant_Y_démodulé_C">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>null</Field1>
+                    <Field2>null</Field2>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" DataType="@-827244755_0" Id="254" Name="X_modulant_Y_démodulé">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>null</Field1>
+                    <Field2>null</Field2>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
         <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
             <p.TypeReference TypeId="857425820_0">
                 <Class Id="1" Name="" Cluster="">
@@ -405,6 +523,38 @@
                                 <VariableArray>
                                     <DereferenceType>
                                         <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+            <p.TypeReference TypeId="-827244755_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Element 1">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <Double />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Element 2">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <Double />
                                     </DereferenceType>
                                 </VariableArray>
                             </DataType>

@@ -19,9 +19,9 @@
                 </Canvas>
             </IconPanel>
         </Icon>
-        <ConnectorPane Height="50" Id="9" ListViewHeight="60" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+        <ConnectorPane Height="50" Id="9" ListViewHeight="75" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
             <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="39" />
-            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 65" Parameter="46" />
             <ConnectorPaneTerminal Hotspot="0 25" />
             <ConnectorPaneTerminal Hotspot="0 35" />
             <ConnectorPaneTerminal Hotspot="0 45" />
@@ -82,13 +82,8 @@
                 <Terminal DataType="Error" Direction="Output" Hotspot="50 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
             </MethodCall>
             <Wire Id="16" Joints="N(14:R0) N(15:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Literal Bounds="283.8 265 40.8 15.2" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="17" Label="18" xmlns="http://www.ni.com/MocCommon">
-                <p.Data>0x3FE6666666666666</p.Data>
-                <NumericBehavior Interpretation="Numeric" ValueFormatter="LV:G6" />
-            </Literal>
-            <TextNode AttachedTo="17" Bounds="266 265 13 16" Id="18" Text="ka" xmlns="http://www.ni.com/PlatformFramework" />
             <Literal Bounds="280 290 26 15.2" DataType="Boolean" Facade="NationalInstruments.MocCommon.Modeling.IBooleanBehavior" Id="19" Label="20" xmlns="http://www.ni.com/MocCommon">
-                <p.Data>False</p.Data>
+                <p.Data>True</p.Data>
                 <BooleanBehavior />
             </Literal>
             <TextNode AttachedTo="19" Bounds="186 290 89 16" Id="20" Text="suppress carrier?" xmlns="http://www.ni.com/PlatformFramework" />
@@ -98,7 +93,7 @@
             </Literal>
             <TextNode AttachedTo="21" Bounds="270 325 10 16" Id="22" Text="fc" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="23" Joints="N(19:Out) h(104) N(14:B0)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="24" Joints="N(17:Out) h(5) v(-70) N(14:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="24" Joints="N(47:Value) h(5) v(-70) N(14:L1)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="25" Joints="N(21:Out) h(253) v(-130) N(15:L1)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="33" Joints="N(15:R0) N(35:Value)" xmlns="http://www.ni.com/PlatformFramework" />
             <DataAccessor Bounds="805 185 40 15" DataItem="34" Id="35" Label="38">
@@ -110,12 +105,18 @@
             </DataAccessor>
             <TextNode AttachedTo="40" Bounds="159 185 6 16" Id="43" Text="y" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="44" Joints="N(40:Value) N(14:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="290 265 40 15" DataItem="46" Id="47" Label="50">
+                <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="47" Bounds="272 265 13 16" Id="50" Text="ka" xmlns="http://www.ni.com/PlatformFramework" />
         </BlockDiagram>
         <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
             <Waveform BaseName="[string]Waveform" Height="[float]136" Id="36" IsReadOnly="[bool]True" Label="[UIModel]37" Left="[float]314" Top="[float]180" WaveformData="{DataItemBinding Id=34}" WaveformDataType="[Type]Double" Width="[float]255" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
             <Label Id="37" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]36" Left="[float]314" Locked="[bool]True" Text="[string]modulé" Top="[float]157" />
             <Waveform BaseName="[string]Waveform" Height="[float]136" Id="41" Label="[UIModel]42" Left="[float]611" Top="[float]174" WaveformData="{DataItemBinding Id=39}" WaveformDataType="[Type]Double" Width="[float]255" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
             <Label Id="42" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]41" Left="[float]611" Locked="[bool]True" Text="[string]y" Top="[float]151" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="48" Label="[UIModel]49" Left="[float]314" Top="[float]355" Value="{DataItemBinding Id=46}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="49" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]48" Left="[float]314" Locked="[bool]True" Text="[string]ka" Top="[float]332" />
         </CPFrontPanel>
         <DataItem CallDirection="Output" CallIndex="0" DataType="Wfm(Double)" Id="34" Name="modulé">
             <p.DefaultValue>
@@ -146,6 +147,9 @@
                     </Attributes>
                 </Waveform>
             </p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="1" DataType="Double" Id="46" Name="ka">
+            <p.DefaultValue>0x0</p.DefaultValue>
         </DataItem>
         <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
             <p.TypeReference TypeId="1785820191_0">
