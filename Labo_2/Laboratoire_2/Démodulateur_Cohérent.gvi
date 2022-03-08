@@ -71,26 +71,6 @@
                 <Terminal DataType="Int32" Direction="Output" Hotspot="50 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                 <Terminal DataType="Error" Direction="Output" Hotspot="50 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
             </MethodCall>
-            <MethodCall Bounds="625 265 50 50" DomainName="NI.LabVIEW.ModulationAnalog" Id="25" Target="MT\ Demodulate\ AM\ \(DSB\)\.gvi">
-                <p.MethodDeclaration>
-                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
-                        <Parameter Id="L0" Desc="am modulated waveform" />
-                        <Parameter Id="L1" Desc="modulation index" />
-                        <Parameter Id="L4" Desc="error in" />
-                        <Parameter Id="B0" Desc="suppressed carrier?" />
-                        <Parameter Id="R0" Desc="am demodulated waveform" />
-                        <Parameter Id="R1" Desc="carrier amplitude" />
-                        <Parameter Id="R4" Desc="error out" />
-                    </MethodDeclaration>
-                </p.MethodDeclaration>
-                <Terminal DataType="@1785820191_0" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="Double" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="Error" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="Boolean" Direction="Input" Hotspot="15 50" Id="B0" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="Wfm(Double)" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="Double" Direction="Output" Hotspot="50 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="Error" Direction="Output" Hotspot="50 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-            </MethodCall>
             <DataAccessor Bounds="290 265 40 15" DataItem="14" Id="15" Label="18">
                 <Terminal DataType="Wfm(Double)" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
@@ -99,9 +79,7 @@
                 <Terminal DataType="Wfm(Double)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
             <TextNode AttachedTo="22" Bounds="885 265 54 16" Id="23" Text="démodulé" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="26" Joints="N(25:R0) N(22:Value)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="27" Joints="N(15:Value) N(24:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="28" Joints="N(24:R0) h(65) B(1) N(25:L0) B(1) v(-75) N(56:Value)" xmlns="http://www.ni.com/PlatformFramework" />
             <Literal Bounds="288.8 365 40.8 15.2" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="29" Label="30" xmlns="http://www.ni.com/MocCommon">
                 <p.Data>0x3FE6666666666666</p.Data>
                 <NumericBehavior Interpretation="Numeric" ValueFormatter="LV:G6" />
@@ -127,8 +105,34 @@
                 <Terminal DataType="@1785820191_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
             <TextNode AttachedTo="56" Bounds="535 208 147 16" Id="57" Text="démodulé (downconverted)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="60" Joints="N(33:Out) h(309) N(25:B0)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="62" Joints="N(29:Out) h(288.400024) v(-90) N(25:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <MethodCall Bounds="590 245 50 50" DomainName="NI.LabVIEW.ModulationAnalog" Id="82" Target="MT\ Demodulate\ FM\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="fm modulated waveform" />
+                        <Parameter Id="L2" Desc="fm deviation" />
+                        <Parameter Id="L3" Desc="carrier correction?" />
+                        <Parameter Id="L4" Desc="error in" />
+                        <Parameter Id="T0" Desc="reset?" />
+                        <Parameter Id="B0" Desc="remove transient when reset?" />
+                        <Parameter Id="R0" Desc="fm demodulated waveform" />
+                        <Parameter Id="R2" Desc="carrier offset" />
+                        <Parameter Id="R4" Desc="error out" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="@1785820191_0" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Double" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Boolean" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Boolean" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Boolean" Direction="Input" Hotspot="15 50" Id="B0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Wfm(Double)" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Double" Direction="Output" Hotspot="50 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Error" Direction="Output" Hotspot="50 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <Wire Id="84" Joints="N(24:R0) h(65) v(-20) B(2) N(82:L0) B(2) v(-55) N(56:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="85" Joints="N(82:R0) h(195) v(20) N(22:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="90" Joints="N(33:Out) h(252) v(-130) N(82:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="91" Joints="N(29:Out) h(250.400024) v(-100) N(82:L2)" xmlns="http://www.ni.com/PlatformFramework" />
         </BlockDiagram>
         <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
             <Waveform BaseName="[string]Waveform" Height="[float]136" Id="16" Label="[UIModel]17" Left="[float]205" Top="[float]152" WaveformData="{DataItemBinding Id=14}" WaveformDataType="[Type]Double" Width="[float]255" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
