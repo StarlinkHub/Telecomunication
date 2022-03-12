@@ -89,7 +89,7 @@
             </PropertyNode>
             <Wire Id="23" Joints="N(14:Out) h(155) v(175) N(22:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
             <AbsoluteValue Bounds="740 330 30 30" Id="24" />
-            <RealFFT Bounds="645 340 50 50" Id="25" Target="Real\ FFT\.gvi">
+            <RealFFT Bounds="645 340 50 50" Id="25" Label="123" Target="Real\ FFT\.gvi">
                 <p.MethodDeclaration>
                     <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
                         <Parameter Id="L0" Desc="x" />
@@ -152,6 +152,7 @@
             </DataAccessor>
             <TextNode AttachedTo="103" Bounds="1080 300 19 16" Id="106" Text="FFT" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="107" Joints="N(22:instance out) N(103:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="25" Bounds="645 322 37 16" Id="123" IsReadOnly="True" Text="FFT.gvi" xmlns="http://www.ni.com/PlatformFramework" />
         </BlockDiagram>
         <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
             <Waveform BaseName="[string]Waveform" Height="[float]136" Id="92" Label="[UIModel]93" Left="[float]459" Top="[float]196" WaveformData="{DataItemBinding Id=90}" WaveformDataType="[Type]Double" Width="[float]255" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />

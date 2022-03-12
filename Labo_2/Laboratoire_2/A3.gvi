@@ -19,9 +19,9 @@
                 </Canvas>
             </IconPanel>
         </Icon>
-        <ConnectorPane Height="50" Id="9" ListViewHeight="60" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+        <ConnectorPane Height="50" Id="9" ListViewHeight="75" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
             <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="39" />
-            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 65" Parameter="51" />
             <ConnectorPaneTerminal Hotspot="0 25" />
             <ConnectorPaneTerminal Hotspot="0 35" />
             <ConnectorPaneTerminal Hotspot="0 45" />
@@ -41,7 +41,7 @@
         <DiagramUnplacedItems Id="10" />
         <FrontPanelUnplacedItems Id="11" />
         <BlockDiagram Id="12">
-            <MethodCall Bounds="605 185 50 50" DomainName="NI.LabVIEW.ModulationShared" Id="15" Target="MT\ Upconvert\ Baseband\ \(Real\)\.gvi">
+            <MethodCall Bounds="605 185 50 50" DomainName="NI.LabVIEW.ModulationShared" Id="15" Label="47" Target="MT\ Upconvert\ Baseband\ \(Real\)\.gvi">
                 <p.MethodDeclaration>
                     <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
                         <Parameter Id="L0" Desc="baseband waveform" />
@@ -62,35 +62,23 @@
                 <Terminal DataType="Error" Direction="Output" Hotspot="50 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
             </MethodCall>
             <Wire Id="16" Joints="N(46:R0) h(5) v(5) N(15:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Literal Bounds="283.8 265 40.8 15.2" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="17" Label="18" xmlns="http://www.ni.com/MocCommon">
-                <p.Data>0x3FE6666666666666</p.Data>
-                <NumericBehavior Interpretation="Numeric" ValueFormatter="LV:G6" />
-            </Literal>
-            <TextNode AttachedTo="17" Bounds="266 265 13 16" Id="18" Text="ka" xmlns="http://www.ni.com/PlatformFramework" />
-            <Literal Bounds="280 290 26 15.2" DataType="Boolean" Facade="NationalInstruments.MocCommon.Modeling.IBooleanBehavior" Id="19" Label="20" xmlns="http://www.ni.com/MocCommon">
-                <p.Data>False</p.Data>
-                <BooleanBehavior />
-            </Literal>
-            <TextNode AttachedTo="19" Bounds="186 290 89 16" Id="20" Text="suppress carrier?" xmlns="http://www.ni.com/PlatformFramework" />
             <Literal Bounds="285 325 60 15.2" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="21" Label="22" xmlns="http://www.ni.com/MocCommon">
-                <p.Data>0x417312D000000000</p.Data>
-                <NumericBehavior Interpretation="Numeric" ValueFormatter="LV:G6" />
+                <p.Data>0x413E848000000000</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
             </Literal>
             <TextNode AttachedTo="21" Bounds="270 325 10 16" Id="22" Text="fc" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="23" Joints="N(19:Out) h(149) v(-120) h(-45) N(46:T0)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="24" Joints="N(17:Out) h(5) v(-70) h(58.4000244) v(-5) N(46:L1)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="25" Joints="N(21:Out) h(253) v(-130) N(15:L1)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="33" Joints="N(15:R0) N(35:Value)" xmlns="http://www.ni.com/PlatformFramework" />
             <DataAccessor Bounds="805 185 40 15" DataItem="34" Id="35" Label="38">
                 <Terminal DataType="Wfm(Double)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
             <TextNode AttachedTo="35" Bounds="850 185 41 16" Id="38" Text="modulé" xmlns="http://www.ni.com/PlatformFramework" />
-            <DataAccessor Bounds="170 185 40 15" DataItem="39" Id="40" Label="43">
+            <DataAccessor Bounds="170 180 40 15" DataItem="39" Id="40" Label="43">
                 <Terminal DataType="Wfm(Double)" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
-            <TextNode AttachedTo="40" Bounds="159 185 6 16" Id="43" Text="y" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="44" Joints="N(40:Value) h(175) v(-5) N(46:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-            <MethodCall Bounds="395 180 50 50" DomainName="NI.LabVIEW.ModulationAnalog" Id="46" Target="MT\ Modulate\ FM\.gvi">
+            <TextNode AttachedTo="40" Bounds="159 180 6 16" Id="43" Text="y" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="44" Joints="N(40:Value) N(46:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+            <MethodCall Bounds="395 180 50 50" DomainName="NI.LabVIEW.ModulationAnalog" Id="46" Label="48" Target="MT\ Modulate\ FM\.gvi">
                 <p.MethodDeclaration>
                     <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
                         <Parameter Id="L0" Desc="message signal" />
@@ -108,12 +96,21 @@
                 <Terminal DataType="@1785820191_0" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                 <Terminal DataType="Error" Direction="Output" Hotspot="50 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
             </MethodCall>
+            <TextNode AttachedTo="15" Bounds="605 167 163 16" Id="47" IsReadOnly="True" Text="MT Upconvert Baseband (Real)" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="46" Bounds="395 162 92 16" Id="48" IsReadOnly="True" Text="MT Modulate FM" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="270 270 40 15" DataItem="51" Id="52" Label="55">
+                <Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="52" Bounds="255 270 10 16" Id="55" Text="kf" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="59" Joints="N(52:Value) h(19.6000061) v(-75) h(58.3999939) v(-5) N(46:L1)" xmlns="http://www.ni.com/PlatformFramework" />
         </BlockDiagram>
         <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
             <Waveform BaseName="[string]Waveform" Height="[float]136" Id="36" IsReadOnly="[bool]True" Label="[UIModel]37" Left="[float]314" Top="[float]180" WaveformData="{DataItemBinding Id=34}" WaveformDataType="[Type]Double" Width="[float]255" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
             <Label Id="37" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]36" Left="[float]314" Locked="[bool]True" Text="[string]modulé" Top="[float]157" />
             <Waveform BaseName="[string]Waveform" Height="[float]136" Id="41" Label="[UIModel]42" Left="[float]611" Top="[float]174" WaveformData="{DataItemBinding Id=39}" WaveformDataType="[Type]Double" Width="[float]255" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
             <Label Id="42" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]41" Left="[float]611" Locked="[bool]True" Text="[string]y" Top="[float]151" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="53" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]54" Left="[float]353" Top="[float]92" Value="{DataItemBinding Id=51}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="54" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]53" Left="[float]353" Locked="[bool]True" Text="[string]kf" Top="[float]69" />
         </CPFrontPanel>
         <DataItem CallDirection="Output" CallIndex="0" DataType="Wfm(Double)" Id="34" Name="modulé">
             <p.DefaultValue>
@@ -144,6 +141,9 @@
                     </Attributes>
                 </Waveform>
             </p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="1" DataType="Double" Id="51" Name="kf">
+            <p.DefaultValue>0x0</p.DefaultValue>
         </DataItem>
         <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
             <p.TypeReference TypeId="1785820191_0">

@@ -41,7 +41,7 @@
         <DiagramUnplacedItems Id="10" />
         <FrontPanelUnplacedItems Id="11" />
         <BlockDiagram Id="12">
-            <MethodCall Bounds="410 265 50 50" DomainName="NI.LabVIEW.ModulationShared" Id="24" Target="MT\ Downconvert\ Passband\ \(Real\)\.gvi">
+            <MethodCall Bounds="410 265 50 50" DomainName="NI.LabVIEW.ModulationShared" Id="24" Label="94" Target="MT\ Downconvert\ Passband\ \(Real\)\.gvi">
                 <p.MethodDeclaration>
                     <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
                         <Parameter Id="L0" Desc="waveform" />
@@ -80,32 +80,28 @@
             </DataAccessor>
             <TextNode AttachedTo="22" Bounds="885 265 54 16" Id="23" Text="démodulé" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="27" Joints="N(15:Value) N(24:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Literal Bounds="288.8 365 40.8 15.2" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="29" Label="30" xmlns="http://www.ni.com/MocCommon">
-                <p.Data>0x3FE6666666666666</p.Data>
-                <NumericBehavior Interpretation="Numeric" ValueFormatter="LV:G6" />
+            <Literal Bounds="272 365 57.6 15.2" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="29" Label="30" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0x40D86A0000000000</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
             </Literal>
-            <TextNode AttachedTo="29" Bounds="270 365 13 16" Id="30" Text="ka" xmlns="http://www.ni.com/PlatformFramework" />
-            <Literal Bounds="269.6 435 60 15.2" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="31" Label="32" xmlns="http://www.ni.com/MocCommon">
-                <p.Data>0x417312D000000000</p.Data>
-                <NumericBehavior Interpretation="Numeric" ValueFormatter="LV:G6" />
+            <TextNode AttachedTo="29" Bounds="257 365 10 16" Id="30" Text="kf" xmlns="http://www.ni.com/PlatformFramework" />
+            <Literal Bounds="269.600037 435 60 15.2" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="31" Label="32" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0x413E848000000000</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
             </Literal>
-            <TextNode AttachedTo="31" Bounds="254 435 10 16" Id="32" Text="fc" xmlns="http://www.ni.com/PlatformFramework" />
-            <Literal Bounds="305 405 26 15.2" DataType="Boolean" Facade="NationalInstruments.MocCommon.Modeling.IBooleanBehavior" Id="33" xmlns="http://www.ni.com/MocCommon">
-                <p.Data>False</p.Data>
-                <BooleanBehavior />
-            </Literal>
+            <TextNode AttachedTo="31" Bounds="254.600037 435 10 16" Id="32" Text="fc" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="36" Joints="N(31:Out) h(20.3999939) v(-160) N(24:L1)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Literal Bounds="200 310 60 15.2" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="37" Label="38" xmlns="http://www.ni.com/MocCommon">
-                <p.Data>0x412E848000000000</p.Data>
+            <Literal Bounds="208.799988 310 51.2 15.2" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="37" Label="38" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0x40B3880000000000</p.Data>
                 <NumericBehavior Interpretation="Numeric" ValueFormatter="LV:G6" />
             </Literal>
-            <TextNode AttachedTo="37" Bounds="200 328.2 111 16" Id="38" Text="passband bandwidth" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="37" Bounds="208.799988 328.2 111 16" Id="38" Text="passband bandwidth" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="39" Joints="N(37:Out) h(140) v(-25) N(24:L2)" xmlns="http://www.ni.com/PlatformFramework" />
             <DataAccessor Bounds="535 190 40 15" DataItem="55" Id="56" Label="57">
                 <Terminal DataType="@1785820191_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
             <TextNode AttachedTo="56" Bounds="535 208 147 16" Id="57" Text="démodulé (downconverted)" xmlns="http://www.ni.com/PlatformFramework" />
-            <MethodCall Bounds="590 245 50 50" DomainName="NI.LabVIEW.ModulationAnalog" Id="82" Target="MT\ Demodulate\ FM\.gvi">
+            <MethodCall Bounds="590 245 50 50" DomainName="NI.LabVIEW.ModulationAnalog" Id="82" Label="92" Target="MT\ Demodulate\ FM\.gvi">
                 <p.MethodDeclaration>
                     <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
                         <Parameter Id="L0" Desc="fm modulated waveform" />
@@ -131,8 +127,9 @@
             </MethodCall>
             <Wire Id="84" Joints="N(24:R0) h(65) v(-20) B(2) N(82:L0) B(2) v(-55) N(56:Value)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="85" Joints="N(82:R0) h(195) v(20) N(22:Value)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="90" Joints="N(33:Out) h(252) v(-130) N(82:L3)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="91" Joints="N(29:Out) h(250.400024) v(-100) N(82:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="91" Joints="N(29:Out) h(250.4) v(-100) N(82:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="82" Bounds="590 227 106 16" Id="92" IsReadOnly="True" Text="MT Demodulate FM" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="24" Bounds="410 247 177 16" Id="94" IsReadOnly="True" Text="MT Downconvert Passband (Real)" xmlns="http://www.ni.com/PlatformFramework" />
         </BlockDiagram>
         <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
             <Waveform BaseName="[string]Waveform" Height="[float]136" Id="16" Label="[UIModel]17" Left="[float]205" Top="[float]152" WaveformData="{DataItemBinding Id=14}" WaveformDataType="[Type]Double" Width="[float]255" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
