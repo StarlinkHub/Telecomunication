@@ -237,22 +237,52 @@
                 <Terminal DataType="@-1669575334_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
             <TextNode AttachedTo="515" Bounds="-5 451 147 16" Id="516" Text="Modulation Parameters Out" xmlns="http://www.ni.com/PlatformFramework" />
-            <DataAccessor Bounds="710 640 40 15" DataItem="117" Id="118" Label="269">
+            <DataAccessor Bounds="700 630 40 15" DataItem="117" Id="118" Label="269">
                 <Terminal DataType="UInt8[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
-            <TextNode AttachedTo="118" Bounds="755 640 106 16" Id="269" Text="Decoded Bit Stream" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="118" Bounds="745 630 106 16" Id="269" Text="Decoded Bit Stream" xmlns="http://www.ni.com/PlatformFramework" />
             <CaseStructure Bounds="10 495 670 350" DataType="Error" Default="519" Id="518" Selected="519" UserSelectorBounds="284.8 0 100.8 16.8">
                 <CaseStructure.Case Bounds="5 5 660 340" Id="519" Pattern="No Error">
                     <Wire Id="529" Joints="N(521:519) N(527:519)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <PropertyNode Bounds="10 20 150 45" HasErrorTerminals="False" Id="311" InstanceDataType="@-1669575334_0" Template="List" Terminals="instance in=530~0:5, instance out~150:5, c0t0v~150:35">
+                    <PropertyNode Bounds="10 20 150 45" HasErrorTerminals="False" Id="311" InstanceDataType="@-1669575334_0" Template="List" Terminals="instance in=530~0:5, instance out~150:5, c0t0v=548~150:35">
                         <p.PropertyItem IsWrite="False">
                             <PathElement>Modulation Type</PathElement>
                         </p.PropertyItem>
                     </PropertyNode>
                     <Wire Id="530" Joints="N(531:519) N(311:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Comment Bounds="270 130 110.4 28.8" Id="542" xmlns="http://www.ni.com/MocCommon">
-                        <p.Text>COMPLETE HERE</p.Text>
-                    </Comment>
+                    <CaseStructure Bounds="215 35 385 255" DataType="String" Default="545" Id="543" Selected="545" UserSelectorBounds="121.6 0 141.2 16.8">
+                        <CaseStructure.Case Bounds="5 5 375 245" Id="544" Pattern="&quot;QPSK&quot;">
+                            <ComplexToRealImaginary Bounds="55 85 30 30" Id="566" />
+                            <Wire Id="567" Joints="N(553:544) h(46) v(-5) N(566:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <Wire Id="569" Joints="N(566:x) N(595:x)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <BooleanToInteger Bounds="145 85 30 10" Id="570" />
+                            <BooleanToInteger Bounds="145 160 30 10" Id="575" />
+                            <Wire Id="579" Joints="N(566:y) h(5) v(50) h(5) v(10) N(596:x)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <InterleaveArray Bounds="225 110 40 30" Id="583" Terminals="outArray=586, c0t0v=584, c1t0v=585" />
+                            <Wire Id="584" Joints="N(570:0, 1) h(25) v(35) N(583:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <Wire Id="585" Joints="N(575:0, 1) h(5) v(-30) N(583:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <Wire Id="586" Joints="N(583:outArray) h(101) v(-30) N(564:544)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <IsGreaterOrEqualTo0 Bounds="110 75 30 30" Id="595" />
+                            <IsGreaterOrEqualTo0 Bounds="105 150 30 30" Id="596" />
+                            <Wire Id="597" Joints="N(596:x &gt;= 0?) N(575:Boolean)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <Wire Id="598" Joints="N(595:x &gt;= 0?) N(570:Boolean)" xmlns="http://www.ni.com/PlatformFramework" />
+                        </CaseStructure.Case>
+                        <CaseStructure.Case Bounds="5 5 375 245" Id="545" Pattern="&quot;BPSK&quot;, Default">
+                            <ComplexToRealImaginary Bounds="80 90 30 30" Id="630" />
+                            <Wire Id="631" Joints="N(630:x) N(633:x)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <BooleanToInteger Bounds="200 90 30 10" Id="632" />
+                            <IsGreaterOrEqualTo0 Bounds="135 80 30 30" Id="633" />
+                            <Wire Id="634" Joints="N(633:x &gt;= 0?) N(632:Boolean)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <Wire Id="636" Joints="N(553:545) N(630:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
+                            <Wire Id="638" Joints="N(632:0, 1) N(564:545)" xmlns="http://www.ni.com/PlatformFramework" />
+                        </CaseStructure.Case>
+                        <CaseStructure.Selector Bounds="-4 40 13 15" Docking="Left" Id="546" Terminals="543=548, 544, 545" />
+                        <CaseStructure.Tunnel Bounds="-4 105 13 10" Docking="Left" Id="553" Terminals="543=552, 544=567, 545=636" />
+                        <CaseStructure.Tunnel Bounds="376 95 13 10" Docking="Right" Id="564" Terminals="543=565, 544=586, 545=638" />
+                    </CaseStructure>
+                    <Wire Id="548" Joints="N(311:c0t0v) h(46) v(25) N(546:543)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="552" Joints="N(540:519) N(553:543)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="565" Joints="N(564:543) N(537:519)" xmlns="http://www.ni.com/PlatformFramework" />
                 </CaseStructure.Case>
                 <CaseStructure.Case Bounds="5 5 660 340" Id="520" Pattern="Error">
                     <Wire Id="526" Joints="N(521:520) N(527:520)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -266,14 +296,14 @@
                             <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
                         </Literal>
                     </ArrayLiteral>
-                    <Wire Id="538" Joints="N(533:Out) N(537:520)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="538" Joints="N(533:Out) h(15.2000122) v(-10) N(537:520)" xmlns="http://www.ni.com/PlatformFramework" />
                     <TextNode AttachedTo="533" Bounds="535.000061 140 0 0" Id="535" Text="Decoded Bit Stream" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
                 </CaseStructure.Case>
                 <CaseStructure.Selector Bounds="-4 315 13 15" Docking="Left" Id="521" Terminals="518=525, 519=529, 520=526" />
                 <CaseStructure.Tunnel Bounds="661 315 13 10" Docking="Right" Id="527" Terminals="518=528, 519=529, 520=526" />
                 <CaseStructure.Tunnel Bounds="-4 25 13 10" Docking="Left" Id="531" Terminals="518=344, 519=530, 520" />
-                <CaseStructure.Tunnel Bounds="661 145 13 10" Docking="Right" Id="537" Terminals="518=536, 519, 520=538" />
-                <CaseStructure.Tunnel Bounds="-4 145 13 10" Docking="Left" Id="540" Terminals="518=539, 519, 520" />
+                <CaseStructure.Tunnel Bounds="661 135 13 10" Docking="Right" Id="537" Terminals="518=536, 519=565, 520=538" />
+                <CaseStructure.Tunnel Bounds="-4 145 13 10" Docking="Left" Id="540" Terminals="518=539, 519=552, 520" />
             </CaseStructure>
             <Wire Id="525" Joints="N(106:Value) N(521:518)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="528" Joints="N(527:518) N(206:Value)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -281,7 +311,7 @@
             <Wire Id="539" Joints="N(18:Value) N(540:518)" xmlns="http://www.ni.com/PlatformFramework" />
         </BlockDiagram>
         <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
-            <ArrayViewer ArrayElement="[UIModel]16" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]181" Id="19" Label="[UIModel]214" Left="[float]127" Orientation="[SMOrientation]Vertical" Rows="[int]7" Top="[float]121" Value="{DataItemBinding Id=17}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <ArrayViewer ArrayElement="[UIModel]16" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]180" Id="19" Label="[UIModel]214" Left="[float]127" Orientation="[SMOrientation]Vertical" Rows="[int]7" Top="[float]121" Value="{DataItemBinding Id=17}" Width="[float]129" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="16" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]124" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]127" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]69" />
             </ArrayViewer>
@@ -293,7 +323,7 @@
                 <StringControl AcceptsReturn="[bool]True" Height="[float]80" HorizontalScrollBarVisibility="[ScrollBarVisibility]Auto" Id="112" IsReadOnly="[bool]False" Label="[UIModel]113" Left="[float]5" Text="{ClusterBinding FieldName=source}" Top="[float]72" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]120" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
                 <Label Id="113" LabelOwner="[UIModel]112" Left="[float]5" Locked="[bool]True" Text="[string]source" Top="[float]52" />
             </Cluster>
-            <ArrayViewer ArrayElement="[UIModel]116" BaseName="[string]Array" Columns="[int]6" Dimensions="[int]1" Height="[float]37" Id="119" Label="[UIModel]217" Left="[float]295" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]121" Value="{DataItemBinding Id=117}" Width="[float]286" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <ArrayViewer ArrayElement="[UIModel]116" BaseName="[string]Array" Columns="[int]6" Dimensions="[int]1" Height="[float]36" Id="119" Label="[UIModel]217" Left="[float]295" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]121" Value="{DataItemBinding Id=117}" Width="[float]286" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <p.DefaultElementValue>0</p.DefaultElementValue>
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="116" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]53" Name="[string]Child" Top="[float]7" Value="[byte]0" ValueType="[Type]UInt8" Width="[float]36" />
             </ArrayViewer>

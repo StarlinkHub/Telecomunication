@@ -55,7 +55,7 @@
             <DataAccessor Bounds="1045 345 40 15" DataItem="107" Id="15" Label="99">
                 <Terminal DataType="Error" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
-            <CaseStructure Bounds="20 45 1010 475" DataType="Error" Id="20" Selected="21" UserSelectorBounds="455 0 100 17">
+            <CaseStructure Bounds="20 45 1010 475" DataType="Error" Id="20" Selected="21" UserSelectorBounds="454.4 0 100.8 16.8">
                 <CaseStructure.Case Bounds="5 5 1000 465" Id="21" Pattern="No Error">
                     <DataAccessor Bounds="235 235 40 15" DataItem="112" Id="28" Label="32">
                         <Terminal DataType="Int8[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
@@ -80,21 +80,21 @@
                     <Wire Id="55" Joints="N(466:R0) h(15) v(-120) B(2) N(475:L0) B(2) v(-20) N(37:Value)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="56" Joints="N(466:R1) N(26:21)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="60" Joints="N(436:R0) N(475:L1)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="62" Joints="N(710:R3) N(716:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="62" Joints="N(710:R3) N(872:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="63" Joints="N(466:R2) h(130) v(-100) N(30:Value)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="64" Joints="N(451:R3) h(10) v(-90) N(723:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="65" Joints="N(23:21) N(710:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="66" Joints="N(723:R1) N(466:L1)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="70" Joints="N(710:R1) N(716:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="70" Joints="N(710:R1) N(872:L1)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="71" Joints="N(723:R3) N(466:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="72" Joints="N(466:R3) h(10) v(10) N(24:21)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="75" Joints="N(716:R3) N(730:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="75" Joints="N(872:R3) N(730:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="76" Joints="N(451:R2) N(77:Value)" xmlns="http://www.ni.com/PlatformFramework" />
                     <DataAccessor Bounds="520 365 40 15" DataItem="118" Id="77" Label="78">
                         <Terminal DataType="@1396143528_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
                     </DataAccessor>
                     <TextNode AttachedTo="77" Bounds="565 365 64 16" Id="78" Text="Queues Out" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="81" Joints="N(710:R0) h(30) B(1) N(716:L0) B(1) v(-20) N(28:Value) B(1) v(100) N(451:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="81" Joints="N(710:R0) h(30) B(1) N(872:L0) B(1) v(-20) N(28:Value) B(1) v(100) N(451:L1)" xmlns="http://www.ni.com/PlatformFramework" />
                     <DataAccessor Bounds="780 155 40 15" DataItem="119" Id="82" Label="83">
                         <Terminal DataType="@-476918808_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
                     </DataAccessor>
@@ -119,8 +119,8 @@
                         <Terminal DataType="Int32" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                     </MethodCall>
                     <Wire Id="439" Joints="N(436:R3) N(36:Value)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="448" Joints="N(716:R0) h(80) B(1) N(730:L0) B(1) v(-20) B(3) N(31:Value) B(3) v(-50) h(245) v(-30) N(475:L2)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="449" Joints="N(716:R1) N(730:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="448" Joints="N(872:R0) h(80) B(1) N(730:L0) B(1) v(-20) B(3) N(31:Value) B(3) v(-50) h(245) v(-30) N(475:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="449" Joints="N(872:R1) N(730:L1)" xmlns="http://www.ni.com/PlatformFramework" />
                     <MethodCall Bounds="455 345 40 40" Id="451" Target="transmitter_enque\ \(SubVI\)\.gvi">
                         <p.MethodDeclaration>
                             <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
@@ -192,28 +192,28 @@
                         <Terminal DataType="@-499706384_0" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
                     </DataAccessor>
                     <TextNode AttachedTo="494" Bounds="510 216 143 16" Id="495" Text="Channel Model Parameters" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Comment Bounds="340 20 357 55" Id="47" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="340 20 356.8 55.2" Id="47" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>"1. Get symbol period and determine number of data symbols\n2. generate baseband signal from source bits\n3. Apply artificial channel to baseband signal"</p.Text>
                     </Comment>
-                    <Comment Bounds="415 395 227 42" Id="46" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="415 395 227.2 41.6" Id="46" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>"place generated key bit sequence \nand training sequence in their queues"</p.Text>
                     </Comment>
-                    <Comment Bounds="40 110 344 28" Id="48" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="40 110 344.4 28" Id="48" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>1. Get symbol rate and determine number of data symbols</p.Text>
                     </Comment>
-                    <Comment Bounds="240 310 269 28" Id="50" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="240 310 268.4 28" Id="50" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>2. generate baseband signal from source bits</p.Text>
                     </Comment>
                     <Comment Bounds="585 310 266 28" Id="49" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>3. Apply artificial channel to baseband signal</p.Text>
                     </Comment>
-                    <Comment Bounds="670 180 97 28" Id="45" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="670 180 97.2 28" Id="45" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>generate plots</p.Text>
                     </Comment>
-                    <Comment Bounds="475 175 91 28" Id="52" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="475 175 91.6 28" Id="52" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>data symbols</p.Text>
                     </Comment>
-                    <Comment Bounds="480 135 83 28" Id="51" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="480 135 83.2 28" Id="51" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>symbol rate</p.Text>
                     </Comment>
                     <MethodCall Bounds="160 255 40 40" Id="710" Target="source\.gviprotected">
@@ -230,26 +230,6 @@
                         <Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@-960863178_0" Direction="Output" Hotspot="40 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="Int8[]" Direction="Output" Hotspot="40 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                    </MethodCall>
-                    <MethodCall Bounds="265 255 40 40" Id="716" Target="modulate\.gviprotected">
-                        <p.MethodDeclaration>
-                            <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
-                                <Parameter Id="L1" Desc="Modulation Parameters In" />
-                                <Parameter Id="L0" Desc="input bit stream" />
-                                <Parameter Id="L2" Desc="Symbol Energy (1)" />
-                                <Parameter Id="L3" Desc="error in (no error)" />
-                                <Parameter Id="R1" Desc="Modulation Parameters Out" />
-                                <Parameter Id="R0" Desc="output symbols" />
-                                <Parameter Id="R3" Desc="error out" />
-                            </MethodDeclaration>
-                        </p.MethodDeclaration>
-                        <Terminal DataType="@-960863178_0" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="Int8[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="Double" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="@-960863178_0" Direction="Output" Hotspot="40 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                     </MethodCall>
                     <MethodCall Bounds="510 255 40 40" Id="723" Target="pulse_shaping\.gviprotected">
@@ -291,6 +271,24 @@
                         <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@-960863178_0" Direction="Output" Hotspot="40 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                    </MethodCall>
+                    <MethodCall Bounds="265 255 40 40" Id="872" Target="student_modulate\.gvi">
+                        <p.MethodDeclaration>
+                            <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                                <Parameter Id="L1" Desc="Modulation Parameters In" />
+                                <Parameter Id="L0" Desc="Input Bit Stream" />
+                                <Parameter Id="L3" Desc="Error In" />
+                                <Parameter Id="R1" Desc="Modulation Parameters Out" />
+                                <Parameter Id="R0" Desc="Output Symbols" />
+                                <Parameter Id="R3" Desc="Error Out" />
+                            </MethodDeclaration>
+                        </p.MethodDeclaration>
+                        <Terminal DataType="@-960863178_0" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="UInt8[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="@-960863178_0" Direction="Output" Hotspot="40 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                     </MethodCall>
                 </CaseStructure.Case>
                 <CaseStructure.Case Bounds="5 5 1000 465" Id="22" Pattern="Error">
@@ -357,17 +355,17 @@
                 <Label Id="137" LabelOwner="[UIModel]136" Left="[float]5" Locked="[bool]True" Text="[string]source" Top="[float]52" />
             </Cluster>
             <Label Id="138" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]131" Left="[float]231" Locked="[bool]True" Text="[string]error out" Top="[float]271" />
-            <ArrayViewer ArrayElement="[UIModel]238" BaseName="[string]Array" Columns="[int]9" Dimensions="[int]1" Height="[float]37" Id="237" IsFixedSize="[bool]False" Label="[UIModel]239" Left="[float]86" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]117" Value="{DataItemBinding Id=112}" Width="[float]400" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <ArrayViewer ArrayElement="[UIModel]238" BaseName="[string]Array" Columns="[int]9" Dimensions="[int]1" Height="[float]36" Id="237" IsFixedSize="[bool]False" Label="[UIModel]239" Left="[float]86" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]117" Value="{DataItemBinding Id=112}" Width="[float]400" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <p.DefaultElementValue>0</p.DefaultElementValue>
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="238" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]205" Name="[string]Child" Top="[float]7" Value="[sbyte]0" ValueType="[Type]Int8" Width="[float]36" />
             </ArrayViewer>
             <Label Id="239" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]237" Left="[float]86" Locked="[bool]True" Text="[string]Key Bit Sequence" Top="[float]94" />
             <NumericText BaseName="[string]Numeric" Height="[float]22" Id="253" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]254" Left="[float]86" RadixVisibility="[SMVisibility]Collapsed" Top="[float]243" Value="{DataItemBinding Id=114}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
             <Label Id="254" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]253" Left="[float]86" Locked="[bool]True" Text="[string]Actual Delay (Sec)" Top="[float]220" />
-            <Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@1785820191_0" Height="[float]162" Id="260" Label="[UIModel]268" Left="[float]383" Top="[float]294" Value="{DataItemBinding Id=117}" Width="[float]138">
+            <Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@1785820191_0" Height="[float]161" Id="260" Label="[UIModel]268" Left="[float]383" Top="[float]294" Value="{DataItemBinding Id=117}" Width="[float]137">
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="261" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]264" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]25" Value="{ClusterBinding FieldName=t0}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="262" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]265" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]70" Value="{ClusterBinding FieldName=dt}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-                <ArrayViewer ArrayElement="[UIModel]267" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]37" Id="263" Label="[UIModel]266" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]115" Value="{ClusterBinding FieldName=Y}" Width="[float]115" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <ArrayViewer ArrayElement="[UIModel]267" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="263" Label="[UIModel]266" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]115" Value="{ClusterBinding FieldName=Y}" Width="[float]114" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                     <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
                     <NumericText BaseName="[string]Numeric" Height="[float]22" Id="267" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]54" />
                 </ArrayViewer>
@@ -400,11 +398,151 @@
                                 <RangeLabeledDivisions Id="303" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="601" />
                             </Axis>
-                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="298" Label="[string]Amplitude" MajorDivisions="[UIModel]599" MajorGridLines="[UIModel]600" Orientation="[SMOrientation]Vertical" Range="[IRange]-1.3, 1.4000000000000001, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="298" Label="[string]Amplitude" MajorDivisions="[UIModel]599" MajorGridLines="[UIModel]600" Orientation="[SMOrientation]Vertical" Range="[IRange]-0.60000000000000009, 0.70000000000000007, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="599" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="600" />
                             </Axis>
                             <Plot HorizontalScale="[UIModel]297" Id="299" Label="[string]Plot" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="732" Label="[string]Plot1" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="733" Label="[string]Plot2" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="734" Label="[string]Plot3" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="735" Label="[string]Plot4" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="736" Label="[string]Plot5" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="737" Label="[string]Plot6" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="738" Label="[string]Plot7" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="739" Label="[string]Plot8" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="740" Label="[string]Plot9" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="741" Label="[string]Plot10" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="742" Label="[string]Plot11" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="743" Label="[string]Plot12" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="744" Label="[string]Plot13" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="745" Label="[string]Plot14" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="746" Label="[string]Plot15" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="747" Label="[string]Plot16" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="748" Label="[string]Plot17" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="749" Label="[string]Plot18" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="750" Label="[string]Plot19" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="751" Label="[string]Plot20" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="752" Label="[string]Plot21" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="753" Label="[string]Plot22" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="754" Label="[string]Plot23" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="755" Label="[string]Plot24" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="756" Label="[string]Plot25" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="757" Label="[string]Plot26" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="758" Label="[string]Plot27" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="759" Label="[string]Plot28" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="760" Label="[string]Plot29" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="761" Label="[string]Plot30" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="762" Label="[string]Plot31" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="763" Label="[string]Plot32" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="764" Label="[string]Plot33" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="765" Label="[string]Plot34" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="766" Label="[string]Plot35" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="767" Label="[string]Plot36" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="768" Label="[string]Plot37" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="769" Label="[string]Plot38" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="770" Label="[string]Plot39" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="771" Label="[string]Plot40" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="772" Label="[string]Plot41" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="773" Label="[string]Plot42" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="774" Label="[string]Plot43" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="775" Label="[string]Plot44" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="776" Label="[string]Plot45" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="777" Label="[string]Plot46" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="778" Label="[string]Plot47" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="779" Label="[string]Plot48" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="780" Label="[string]Plot49" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="781" Label="[string]Plot50" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="782" Label="[string]Plot51" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="783" Label="[string]Plot52" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="784" Label="[string]Plot53" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="785" Label="[string]Plot54" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="786" Label="[string]Plot55" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="787" Label="[string]Plot56" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="788" Label="[string]Plot57" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="789" Label="[string]Plot58" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="790" Label="[string]Plot59" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="791" Label="[string]Plot60" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="792" Label="[string]Plot61" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="793" Label="[string]Plot62" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="794" Label="[string]Plot63" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="795" Label="[string]Plot64" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="796" Label="[string]Plot65" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="797" Label="[string]Plot66" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="798" Label="[string]Plot67" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="799" Label="[string]Plot68" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="800" Label="[string]Plot69" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="801" Label="[string]Plot70" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="802" Label="[string]Plot71" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="803" Label="[string]Plot72" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="804" Label="[string]Plot73" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="805" Label="[string]Plot74" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="806" Label="[string]Plot75" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="807" Label="[string]Plot76" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="808" Label="[string]Plot77" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="809" Label="[string]Plot78" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="810" Label="[string]Plot79" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="811" Label="[string]Plot80" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="812" Label="[string]Plot81" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="813" Label="[string]Plot82" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="814" Label="[string]Plot83" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="815" Label="[string]Plot84" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="816" Label="[string]Plot85" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="817" Label="[string]Plot86" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="818" Label="[string]Plot87" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="819" Label="[string]Plot88" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="820" Label="[string]Plot89" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="821" Label="[string]Plot90" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="822" Label="[string]Plot91" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="823" Label="[string]Plot92" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="824" Label="[string]Plot93" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="825" Label="[string]Plot94" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="826" Label="[string]Plot95" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="827" Label="[string]Plot96" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="828" Label="[string]Plot97" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="829" Label="[string]Plot98" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="830" Label="[string]Plot99" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="831" Label="[string]Plot100" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="832" Label="[string]Plot101" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="833" Label="[string]Plot102" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="834" Label="[string]Plot103" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="835" Label="[string]Plot104" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="836" Label="[string]Plot105" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="837" Label="[string]Plot106" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="838" Label="[string]Plot107" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="839" Label="[string]Plot108" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="840" Label="[string]Plot109" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="841" Label="[string]Plot110" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="842" Label="[string]Plot111" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="843" Label="[string]Plot112" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="844" Label="[string]Plot113" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="845" Label="[string]Plot114" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="846" Label="[string]Plot115" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="847" Label="[string]Plot116" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="848" Label="[string]Plot117" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="849" Label="[string]Plot118" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="850" Label="[string]Plot119" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="851" Label="[string]Plot120" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="852" Label="[string]Plot121" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="853" Label="[string]Plot122" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="854" Label="[string]Plot123" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="855" Label="[string]Plot124" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="856" Label="[string]Plot125" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="857" Label="[string]Plot126" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="858" Label="[string]Plot127" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="859" Label="[string]Plot128" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="860" Label="[string]Plot129" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="861" Label="[string]Plot130" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="862" Label="[string]Plot131" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="863" Label="[string]Plot132" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="864" Label="[string]Plot133" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="865" Label="[string]Plot134" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="866" Label="[string]Plot135" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="867" Label="[string]Plot136" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="868" Label="[string]Plot137" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="869" Label="[string]Plot138" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="870" Label="[string]Plot139" VerticalScale="[UIModel]298" />
+                            <Plot HorizontalScale="[UIModel]297" Id="871" Label="[string]Plot140" VerticalScale="[UIModel]298" />
                         </Graph>
                         <Label Id="288" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]287" Left="[float]6" Locked="[bool]True" Text="[string]Eye Diagram" Top="[float]-16" Visible="[bool]False" xmlns="http://www.ni.com/LabVIEW.VI" />
                         <PlotLegend Graph="[UIModel]287" Height="[float]28" Id="289" Left="[float]300" Top="[float]-23" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
@@ -432,12 +570,13 @@
                             </Axis>
                             <Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="301" Label="[string]Amplitude" Orientation="[SMOrientation]Vertical" Range="[IRange]-0.8, 0.8, System.Double" ValueType="[Type]Double" />
                             <Plot HorizontalScale="[UIModel]300" Id="302" Label="[string]Plot" VerticalScale="[UIModel]301" />
+                            <Plot HorizontalScale="[UIModel]300" Id="731" Label="[string]Plot1" VerticalScale="[UIModel]301" />
                         </Graph>
                     </Canvas>
                 </TabItem>
             </TabControl>
             <Label Id="275" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]282" Left="[float]537" Locked="[bool]True" Text="[string]Tab" Top="[float]75" Visible="[bool]False" />
-            <ArrayViewer ArrayElement="[UIModel]256" BaseName="[string]Array" Columns="[int]6" Dimensions="[int]1" Height="[float]37" Id="255" Label="[UIModel]257" Left="[float]86" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]180" Value="{DataItemBinding Id=115}" Width="[float]400" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <ArrayViewer ArrayElement="[UIModel]256" BaseName="[string]Array" Columns="[int]6" Dimensions="[int]1" Height="[float]36" Id="255" Label="[UIModel]257" Left="[float]86" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]180" Value="{DataItemBinding Id=115}" Width="[float]400" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                 <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="256" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]338" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]55" />
             </ArrayViewer>
@@ -445,7 +584,7 @@
             <Text Foreground="[SMColor]#ffffffff" Id="424" Left="[float]257" Text="[string]Transmitter generates bit sequence, applies modulation, pulse shaping, and channel model" TextWrapping="[TextWrapping]NoWrap" Top="[float]62" xmlns="http://www.ni.com/PlatformFramework" />
             <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-499706384_0" Height="[float]214" Id="478" Label="[UIModel]492" Left="[float]625" Top="[float]657" Value="{DataItemBinding Id=493}" Width="[float]294">
                 <NumericText BaseName="[string]Numeric" Height="[float]22" Id="479" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]483" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]71" Value="{ClusterBinding FieldName=Noise\ Power\ (dB)}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-                <ArrayViewer ArrayElement="[UIModel]489" BaseName="[string]Array" Columns="[int]3" Dimensions="[int]1" Height="[float]37" Id="480" Label="[UIModel]484" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]119" Value="{ClusterBinding FieldName=Channel\ Response}" Width="[float]272" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <ArrayViewer ArrayElement="[UIModel]489" BaseName="[string]Array" Columns="[int]3" Dimensions="[int]1" Height="[float]36" Id="480" Label="[UIModel]484" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]119" Value="{ClusterBinding FieldName=Channel\ Response}" Width="[float]272" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
                     <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
                     <NumericText BaseName="[string]Numeric" Height="[float]22" Id="489" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]31" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]69" />
                 </ArrayViewer>

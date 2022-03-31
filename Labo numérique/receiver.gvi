@@ -98,7 +98,7 @@
             <DataAccessor Bounds="-215 415 40 15" DataItem="122" Id="17" Label="113">
                 <Terminal DataType="@1785820191_0" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
-            <CaseStructure Bounds="-155 175 1310 610" DataType="Error" Id="21" Selected="22" UserSelectorBounds="605 0 100 17">
+            <CaseStructure Bounds="-155 175 1310 610" DataType="Error" Id="21" Selected="22" UserSelectorBounds="604.8 0 100.8 16.8">
                 <CaseStructure.Case Bounds="5 5 1300 600" Id="22" Pattern="No Error">
                     <DataAccessor Bounds="885 380 40 15" DataItem="126" Id="31" Label="53">
                         <Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
@@ -128,7 +128,7 @@
                     <Wire Id="67" Joints="N(585:B1) v(200) N(592:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="69" Joints="N(585:T0) v(-55) N(625:L0)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="70" Joints="N(558:T2) v(-55) N(35:Value)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="71" Joints="N(1091:R1) h(255) v(-40) N(625:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="71" Joints="N(1110:R1) h(240) v(-40) N(625:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="74" Joints="N(28:22) h(86) v(30) N(1084:L0)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="75" Joints="N(26:22) h(11) v(-30) N(558:L2)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="76" Joints="N(558:B2) v(80) B(1) h(715) v(5) h(25) v(-5) N(1098:L1) B(1) v(35) N(34:Value)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -141,8 +141,8 @@
                     <Wire Id="87" Joints="N(1084:R3) N(585:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="88" Joints="N(585:R3) N(1109:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="89" Joints="N(1109:R3) N(604:L3)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="92" Joints="N(1091:R0) h(35) v(115) N(1098:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="93" Joints="N(1091:R3) h(25) v(115) N(1098:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="92" Joints="N(1110:R0) h(20) v(115) N(1098:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="93" Joints="N(1110:R3) h(10) v(115) N(1098:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="94" Joints="N(585:R0) h(30) B(1) N(1109:L0) B(1) v(-10) h(75) v(10) N(604:L0)" xmlns="http://www.ni.com/PlatformFramework" />
                     <DataAccessor Bounds="85 205 40 15" DataItem="130" Id="35" Label="57">
                         <Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
@@ -243,9 +243,9 @@
                     <Wire Id="609" Joints="N(604:R3) N(1104:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="610" Joints="N(604:R0) N(1104:L0)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="612" Joints="N(604:R1) N(1104:L1)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="616" Joints="N(1104:R1) N(1091:L1)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="617" Joints="N(1104:R0) h(5) B(1) N(1091:L0) B(1) v(-40) N(625:L2)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="618" Joints="N(1104:R3) N(1091:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="616" Joints="N(1104:R1) N(1110:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="617" Joints="N(1104:R0) h(5) B(1) N(1110:L0) B(1) v(-40) N(625:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="618" Joints="N(1104:R3) N(1110:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <MethodCall Bounds="1035 205 50 50" Id="625" Target="receiver_generate_waveforms\ \(SubVI\)\.gvi">
                         <p.MethodDeclaration>
                             <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
@@ -264,10 +264,10 @@
                         <Terminal DataType="@-1669575334_0" Direction="Output" Hotspot="50 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@1208913503_0" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                     </MethodCall>
-                    <Comment Bounds="390 25 627 55" Id="49" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="390 25 627.2 55.2" Id="49" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>"1.Determine the number of data symbols and get the key bit sequence and training sequence from the queue\n2. Process baseband signal\n3. Plot the symbol constellation and eye diagram for recovered symbols"</p.Text>
                     </Comment>
-                    <Comment Bounds="885 215 122 28" Id="47" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="885 215 121.6 28" Id="47" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>recovered symbols</p.Text>
                     </Comment>
                     <Wire Id="634" Joints="N(625:R0) N(660:Value)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -275,16 +275,16 @@
                         <Terminal DataType="@1208913503_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
                     </DataAccessor>
                     <TextNode AttachedTo="660" Bounds="1155 205 96 16" Id="661" Text="RX waveforms out" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Comment Bounds="505 155 168 28" Id="50" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="505 155 167.6 28" Id="50" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>2. Process baseband signal</p.Text>
                     </Comment>
-                    <Comment Bounds="485 385 111 28" Id="51" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="485 385 111.2 28" Id="51" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>key bit sequence</p.Text>
                     </Comment>
-                    <Comment Bounds="15 140 433 42" Id="48" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="15 140 433.2 41.6" Id="48" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>"1.Determine the number of data symbols, the symbol rate, the overhead \noffset, and get the key bit sequence and training sequence from the queue"</p.Text>
                     </Comment>
-                    <Comment Bounds="880 150 415 28" Id="52" xmlns="http://www.ni.com/MocCommon">
+                    <Comment Bounds="880 150 415.6 28" Id="52" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>3. Plot the symbol constellation and eye diagram for recovered symbols</p.Text>
                     </Comment>
                     <Wire Id="1079" Joints="N(566:22) h(5) B(1) N(558:L1) B(1) v(260) h(726) N(592:B0)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -306,24 +306,6 @@
                         <Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@-1669575334_0" Direction="Output" Hotspot="40 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@1785820191_0" Direction="Output" Hotspot="40 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                    </MethodCall>
-                    <MethodCall Bounds="725 265 40 40" Id="1091" Target="decode\.gviprotected">
-                        <p.MethodDeclaration>
-                            <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
-                                <Parameter Id="L1" Desc="Modulation Parameters In" />
-                                <Parameter Id="L0" Desc="input symbols" />
-                                <Parameter Id="L3" Desc="error in (no error)" />
-                                <Parameter Id="R1" Desc="Modulation Parameters Out" />
-                                <Parameter Id="R0" Desc="decoded bit stream" />
-                                <Parameter Id="R3" Desc="error out" />
-                            </MethodDeclaration>
-                        </p.MethodDeclaration>
-                        <Terminal DataType="@-1669575334_0" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="ComplexDouble[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="@-1669575334_0" Direction="Output" Hotspot="40 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
-                        <Terminal DataType="UInt8[]" Direction="Output" Hotspot="40 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                     </MethodCall>
                     <MethodCall Bounds="810 380 40 40" Id="1098" Target="error_detect\.gviprotected">
@@ -381,6 +363,24 @@
                         <Terminal DataType="Int32" Direction="Output" Hotspot="40 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="Double" Direction="Output" Hotspot="25 0" Id="T1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                    </MethodCall>
+                    <MethodCall Bounds="740 265 40 40" Id="1110" Target="student_decode\.gvi">
+                        <p.MethodDeclaration>
+                            <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                                <Parameter Id="L1" Desc="Modulation Parameters In" />
+                                <Parameter Id="L0" Desc="Input Symbols" />
+                                <Parameter Id="L3" Desc="Error In" />
+                                <Parameter Id="R1" Desc="Modulation Parameters Out" />
+                                <Parameter Id="R0" Desc="Decoded Bit Stream" />
+                                <Parameter Id="R3" Desc="Error Out" />
+                            </MethodDeclaration>
+                        </p.MethodDeclaration>
+                        <Terminal DataType="@-1669575334_0" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="ComplexDouble[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="@-1669575334_0" Direction="Output" Hotspot="40 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="UInt8[]" Direction="Output" Hotspot="40 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                     </MethodCall>
                 </CaseStructure.Case>
                 <CaseStructure.Case Bounds="5 5 1300 600" Id="23" Pattern="Error">
