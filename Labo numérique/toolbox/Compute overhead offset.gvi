@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Common Language Components" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/MocCommon" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="62" TemplateName="GrayNoText">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="63" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="64" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3">
+                    <Rectangle EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#00ffffff" Height="[float]52" Id="65" Left="[float]-1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Stroke="[SMSolidColorBrush]#ff000000" StrokeThickness="[float]1" Top="[float]-1" Width="[float]52" />
+                    <Path Data="[PathGeometry]M 27.73334,6.48 L 27.73334,7.56 L 19.2,7.56 L 19.2,1.08 L 11.73333,1.08 L 11.73333,7.56 L 4.266667,7.56 L 4.266667,6.48 L 10.66667,6.48 L 10.66667,0 L 20.26667,0 L 20.26667,6.48 L 27.73334,6.48 Z M 20.26667,15.12 L 20.26667,8.64 L 10.66667,8.64 L 10.66667,15.12 L 4.266667,15.12 L 4.266667,16.2 L 11.73333,16.2 L 11.73333,9.72 L 19.2,9.72 L 19.2,16.2 L 27.73334,16.2 L 27.73334,15.12 L 20.26667,15.12 Z M 20.26667,23.76 L 20.26667,17.28 L 10.66667,17.28 L 10.66667,23.76 L 4.266667,23.76 L 4.266667,24.84 L 11.73333,24.84 L 11.73333,18.36 L 19.2,18.36 L 19.2,24.84 L 27.73334,24.84 L 27.73334,23.76 L 20.26667,23.76 Z M 29.87307,6.48216 L 28.8,6.48 L 28.8,7.56 L 29.87307,7.56216 L 28.8,9.72 L 32,7.02324 L 28.8,4.32 L 29.87307,6.48216 Z M 1.073067,6.48216 L 0,6.48 L 0,7.56 L 1.073067,7.56216 L 0,9.72 L 3.2,7.02324 L 0,4.32 L 1.073067,6.48216 Z M 29.87307,15.12216 L 28.8,15.12 L 28.8,16.2 L 29.87307,16.20216 L 28.8,18.36 L 32,15.66324 L 28.8,12.96 L 29.87307,15.12216 Z M 29.87307,23.76216 L 28.8,23.76 L 28.8,24.84 L 29.87307,24.84216 L 28.8,27 L 32,24.30324 L 28.8,21.6 L 29.87307,23.76216 Z" EditMode="[ShapeEditMode]FixedPath" Fill="[SMSolidColorBrush]#b2000000" Height="[float]27" Id="66" Left="[float]9" MinHeight="[float]1" MinWidth="[float]1" Top="[float]11" Width="[float]32" />
+                </Canvas>
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="90" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="18" />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 50" Parameter="24" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" ListViewHotspot="0 65" Parameter="19" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 80" Parameter="39" />
+            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 25" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="20" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]Pulse Shaping Parameters:Filter Length (Symbols)" Value="{DataItemBinding Id=18}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="21" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Name="[string]RX Oversample Factor" Value="{DataItemBinding Id=19}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="25" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Name="[string]Pulse Shaping Parameters:Pulse Shaping Filter" Value="{DataItemBinding Id=24}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <EnumSelectorInfo DisplayValue="[string]none" Id="26" Value="[ushort]0" ValueType="[Type]UInt16" />
+                <EnumSelectorInfo DisplayValue="[string]Raised Cosine" Id="27" Value="[ushort]1" ValueType="[Type]UInt16" />
+                <EnumSelectorInfo DisplayValue="[string]Root Raised Cos" Id="28" Value="[ushort]2" ValueType="[Type]UInt16" />
+                <EnumSelectorInfo DisplayValue="[string]Gaussian" Id="29" Value="[ushort]3" ValueType="[Type]UInt16" />
+            </EnumSelector>
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="40" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]41" Left="[float]225" Top="[float]56" Value="{DataItemBinding Id=39}" ValueType="[Type]Int32" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <Label Id="41" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]40" Left="[float]225" Locked="[bool]True" Text="[string]overhead offset" Top="[float]33" />
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Id="12">
+            <DataAccessor Bounds="690 270 40 15" DataItem="18" Id="14" Label="16">
+                <Terminal DataType="Int32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <DataAccessor Bounds="690 330 40 15" DataItem="19" Id="15" Label="17">
+                <Terminal DataType="Int32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="14" Bounds="425 270 260 16" Id="16" Text="Pulse Shaping Parameters:Filter Length (Symbols)" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="15" Bounds="568 330 117 16" Id="17" Text="RX Oversample Factor" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="690 300 40 15" DataItem="24" Id="22" Label="23">
+                <Terminal DataType="@-45074056_0" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="22" Bounds="442 300 243 16" Id="23" Text="Pulse Shaping Parameters:Pulse Shaping Filter" xmlns="http://www.ni.com/PlatformFramework" />
+            <CaseStructure Bounds="780 205 260 205" DataType="@-45074056_0" Default="31" Id="30" Selected="32" UserSelectorBounds="54 0 153 17">
+                <CaseStructure.Case Bounds="5 5 250 195" Id="31" Pattern="&quot;none&quot;, Default">
+                    <Decrement Bounds="120 80 30 30" Id="46" />
+                    <Wire Id="47" Joints="N(48:31) h(71) v(-30) N(46:x)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="50" Joints="N(46:x-1) N(43:31)" xmlns="http://www.ni.com/PlatformFramework" />
+                </CaseStructure.Case>
+                <CaseStructure.Case Bounds="5 5 250 195" Id="32" Pattern="&quot;Raised Cosine&quot;">
+                    <Multiply Bounds="90 70 30 30" Id="51" Terminals="o=70, c0t0v=53, c1t0v=52" />
+                    <Wire Id="52" Joints="N(48:32) h(61) v(-35) N(51:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="53" Joints="N(54:32) h(61) v(10) N(51:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <RoundTowardPositiveInfinity Bounds="190 80 30 30" Id="67" />
+                    <Wire Id="68" Joints="N(67:ceil(x\): smallest int &gt;= x) N(43:32)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Divide Bounds="140 80 30 30" Id="69" />
+                    <Wire Id="70" Joints="N(51:o) N(69:x)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="71" Joints="N(69:x/y) N(67:x)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Literal Bounds="85 115 40 15" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="72" Label="73" xmlns="http://www.ni.com/MocCommon">
+                        <p.Data>0x4000000000000000</p.Data>
+                        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+                    </Literal>
+                    <Wire Id="74" Joints="N(72:Out) h(5) v(-20) N(69:y)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <TextNode AttachedTo="72" Bounds="85 115 0 0" Id="73" Text="y" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+                </CaseStructure.Case>
+                <CaseStructure.Case Bounds="5 5 250 195" Id="35" Pattern="&quot;Root Raised Cos&quot;">
+                    <Multiply Bounds="105 80 30 30" Id="57" Terminals="o=60, c0t0v=59, c1t0v=58" />
+                    <Wire Id="58" Joints="N(48:35) h(66) v(-25) N(57:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="59" Joints="N(54:35) h(66) v(20) N(57:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="60" Joints="N(57:o) N(43:35)" xmlns="http://www.ni.com/PlatformFramework" />
+                </CaseStructure.Case>
+                <CaseStructure.Case Bounds="5 5 250 195" Id="36" Pattern="&quot;Gaussian&quot;">
+                    <Literal Bounds="115 90 40 15" DataType="Int32" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="44" xmlns="http://www.ni.com/MocCommon">
+                        <p.Data>0</p.Data>
+                        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+                    </Literal>
+                    <Wire Id="45" Joints="N(44:Out) N(43:36)" xmlns="http://www.ni.com/PlatformFramework" />
+                </CaseStructure.Case>
+                <CaseStructure.Selector Bounds="-4 95 13 15" Docking="Left" Id="33" Terminals="30=34, 31, 32, 35, 36" />
+                <CaseStructure.Tunnel Bounds="251 95 13 10" Docking="Right" Id="43" Terminals="30=42, 31=50, 32=68, 35=60, 36=45" />
+                <CaseStructure.Tunnel Bounds="-4 125 13 10" Docking="Left" Id="48" Terminals="30=49, 31=47, 32=52, 35=58, 36" />
+                <CaseStructure.Tunnel Bounds="-4 65 13 10" Docking="Left" Id="54" Terminals="30=55, 31, 32=53, 35=59, 36" />
+            </CaseStructure>
+            <Wire Id="34" Joints="N(22:Value) N(33:30)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="1120 300 40 15" DataItem="39" Id="37" Label="38">
+                <Terminal DataType="Int32" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="37" Bounds="1165 300 83 16" Id="38" Text="overhead offset" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="42" Joints="N(43:30) N(37:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="49" Joints="N(15:Value) N(48:30)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="55" Joints="N(14:Value) N(54:30)" xmlns="http://www.ni.com/PlatformFramework" />
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000" />
+        <DataItem CallDirection="Input" CallIndex="0" DataType="Int32" Id="18" Name="Pulse Shaping Parameters:Filter Length (Symbols)">
+            <p.DefaultValue>0</p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Input" CallIndex="1" DataType="Int32" Id="19" Name="RX Oversample Factor">
+            <p.DefaultValue>0</p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Input" CallIndex="2" DataType="@-45074056_0" Id="24" Name="Pulse Shaping Parameters:Pulse Shaping Filter">
+            <p.DefaultValue>0</p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Output" CallIndex="0" DataType="Int32" Id="39" Name="overhead offset">
+            <p.DefaultValue>0</p.DefaultValue>
+        </DataItem>
+        <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+            <p.TypeReference TypeId="-45074056_0">
+                <Enumeration Name="Enum">
+                    <Members>
+                        <EnumerationMember Value="0" Name="none" />
+                        <EnumerationMember Value="1" Name="Raised Cosine" />
+                        <EnumerationMember Value="2" Name="Root Raised Cos" />
+                        <EnumerationMember Value="3" Name="Gaussian" />
+                    </Members>
+                    <DataType>
+                        <UInt16 />
+                    </DataType>
+                </Enumeration>
+            </p.TypeReference>
+        </DataTypeReferenceTable>
+    </VirtualInstrument>
+</SourceFile>
